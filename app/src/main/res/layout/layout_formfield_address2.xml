@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="vertical">
+
+
+    <com.yusufteker.myapplication.components.customviews.formfields.SelectionFormFieldView
+        android:id="@+id/citySelectionFF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <com.yusufteker.myapplication.components.customviews.formfields.SelectionFormFieldView
+        android:id="@+id/townSelectionFF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <com.yusufteker.myapplication.components.customviews.formfields.MultiLineFormFieldView
+        android:id="@+id/addressMultiLineFF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

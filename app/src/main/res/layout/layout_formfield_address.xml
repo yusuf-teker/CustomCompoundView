@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:id="@+id/form_field_title"
+            style="@style/formfield_title_text"
+            tools:text ="@string/user_login" />
+
+        <ImageButton
+            android:id="@+id/form_field_tooltip"
+            style="@style/formfield_tip_button"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.yusufteker.myapplication.components.customviews.formfields.SelectionFormFieldView
+            android:id="@+id/citySelectionFF"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+        <com.yusufteker.myapplication.components.customviews.formfields.SelectionFormFieldView
+            android:id="@+id/townSelectionFF"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <com.yusufteker.myapplication.components.customviews.formfields.MultiLineFormFieldView
+        android:id="@+id/addressMultiLineFF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+
+
+</LinearLayout>

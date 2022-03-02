@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:id="@+id/form_field_dialog_image"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            tools:src="@drawable/hint_button_parchment"
+            android:layout_gravity="top"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:id="@+id/form_field_dialog_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+
+            tools:text="Message will shown here."
+            style="@style/formfield_dialog_text"/>
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/form_field_dialog_button"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Okay"
+        android:textSize="15sp"
+        android:paddingHorizontal="50dp" />
+
+
+
+</LinearLayout>
