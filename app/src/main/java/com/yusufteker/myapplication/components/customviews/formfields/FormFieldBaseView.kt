@@ -9,6 +9,7 @@ import android.widget.*
 import androidx.annotation.LayoutRes
 import com.yusufteker.myapplication.R
 import com.yusufteker.myapplication.components.models.FormFieldData
+import com.yusufteker.myapplication.components.models.FormFieldGravityOption
 
 
 abstract class FormFieldBaseView<ViewInput : View> : LinearLayout {
@@ -18,11 +19,11 @@ abstract class FormFieldBaseView<ViewInput : View> : LinearLayout {
     private var data: FormFieldData? = null
     private lateinit var titleTextView: TextView
     private lateinit var tooltipButton: ImageButton
+    private lateinit var rootLayout: LinearLayout
+
     protected lateinit var dialog: Dialog
 
     var tooltipClickListener : OnClickListener? = null
-
-
     protected lateinit var viewInput: ViewInput //her custom formfield içinde bir input var(editText-spinner vs).
 
     constructor(context: Context) : super(context) {
@@ -39,7 +40,6 @@ abstract class FormFieldBaseView<ViewInput : View> : LinearLayout {
 
     private fun initView(data: FormFieldData?) {
         inflateRootLayout() //
-        orientation = VERTICAL
         setData(data)
     }
 
@@ -48,6 +48,10 @@ abstract class FormFieldBaseView<ViewInput : View> : LinearLayout {
             this.data = data
             if (!TextUtils.isEmpty(data.Title))
                 setTitleText(data.Title, data.TooltipMessage)
+            if (data.GravityOption == FormFieldGravityOption.HORIZONTAL){
+                rootLayout.gravity = HORIZONTAL
+            }
+
         }
     }
 
@@ -69,6 +73,9 @@ abstract class FormFieldBaseView<ViewInput : View> : LinearLayout {
         inflate(context, getLayoutResourceId(), this)//getLayoutResourceId ile ff'ın layoutunu alıyoruz
         titleTextView = findViewById(R.id.form_field_title)  //All FormFields have a title text!
         tooltipButton = findViewById(R.id.form_field_tooltip) //All FormFields have a tooltip button!
+        rootLayout = findViewById(R.id.rootLL)
+
+
     }
 
     @LayoutRes

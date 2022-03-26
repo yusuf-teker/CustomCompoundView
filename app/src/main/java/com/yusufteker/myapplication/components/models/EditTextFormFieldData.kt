@@ -9,6 +9,7 @@ class EditTextFormFieldData(
     ValidationMessageInvalidLength: String,
     MaxLength: Int,
     MinLength: Int,
+    GravityOption: FormFieldGravityOption
 ) : FormFieldData(
     Title,
     TooltipMessage,
@@ -18,7 +19,7 @@ class EditTextFormFieldData(
     ValidationMessageInvalidLength,
     MaxLength,
     MinLength,
-    AcceptedChars="abcdefghijklmnopqrstuwxyz0123456789" ,
+    AcceptedChars="abcdefghijklmnopqrstuwxyz0123456789" ,GravityOption
 
 ) {
 

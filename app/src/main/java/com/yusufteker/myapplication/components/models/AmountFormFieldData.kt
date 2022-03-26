@@ -18,8 +18,9 @@ class AmountFormFieldData : FormFieldData {
         ValidationMessageInvalidAmount: String,
         MaxAmount: Double,
         MimAmount: Double,
+        GravityOption: FormFieldGravityOption
 
-    ): super(Title,TooltipMessage,ValidationMessage,ValidationMessageInvalidChars,ValidationMessageEmptyValue,ValidationMessageInvalidLength,MaxLength=8,MinLength=1, AcceptedChars=".1234567890"){
+    ): super(Title,TooltipMessage,ValidationMessage,ValidationMessageInvalidChars,ValidationMessageEmptyValue,ValidationMessageInvalidLength,MaxLength=8,MinLength=1, AcceptedChars=".1234567890",GravityOption){
         this.ValidationMessageInvalidAmount = ValidationMessageInvalidAmount
         this.MaxAmount = MaxAmount
         this.MinAmount = MimAmount

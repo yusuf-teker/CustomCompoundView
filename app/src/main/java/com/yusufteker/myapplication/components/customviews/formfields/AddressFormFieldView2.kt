@@ -45,7 +45,8 @@ class AddressFormFieldView2:  FormFieldBaseView<View>, FormFieldBase{
             }else townSelection.visibility = GONE
 
             addressMultiLine.setData(data.AddressMultiLineFormFieldData)
-            allFormFields.add(citySelection)
+
+            allFormFields.add(citySelection)//if gone validatondan çıkar ekleme
             allFormFields.add(townSelection)
             allFormFields.add(addressMultiLine)
         }
@@ -56,6 +57,7 @@ class AddressFormFieldView2:  FormFieldBaseView<View>, FormFieldBase{
 
 
     override fun validation(): String? {
+        //Gone olanları validationdan çıkar.
         for (ff in allFormFields){
             if (ff.validation()!=null){
                 ff.showError(ff.validation()!!)

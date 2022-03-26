@@ -14,8 +14,8 @@ class SelectionFormFieldData: FormFieldData{
         ValidationMessageEmptyValue: String,
         ValidationMessageInvalidLength: String,
         Selections: List<SpinnerOneLineModel> ,
-
-        ): super(Title,TooltipMessage,ValidationMessage,ValidationMessageInvalidChars,ValidationMessageEmptyValue,ValidationMessageInvalidLength,MaxLength=8,MinLength=1, AcceptedChars="1234567890"){
+        GravityOption: FormFieldGravityOption
+        ): super(Title,TooltipMessage,ValidationMessage,ValidationMessageInvalidChars,ValidationMessageEmptyValue,ValidationMessageInvalidLength,MaxLength=8,MinLength=1, AcceptedChars="1234567890",GravityOption){
 
         this.Selections = Selections
 
@@ -30,9 +30,11 @@ class SelectionFormFieldData: FormFieldData{
         ValidationMessageInvalidLength: String,
         Selections: List<SpinnerOneLineModel> ,
         DefaultSelectionId: String,
-        IsSpinnerListHeader:Boolean
+        IsSpinnerListHeader:Boolean,
+        GravityOption: FormFieldGravityOption
 
-        ):super(Title,TooltipMessage,ValidationMessage,ValidationMessageInvalidChars,ValidationMessageEmptyValue,ValidationMessageInvalidLength,MaxLength=8,MinLength=1, AcceptedChars="1234567890"){
+
+        ):super(Title,TooltipMessage,ValidationMessage,ValidationMessageInvalidChars,ValidationMessageEmptyValue,ValidationMessageInvalidLength,MaxLength=8,MinLength=1, AcceptedChars="1234567890",GravityOption){
         this.Selections = Selections
         this.DefaultSelectionId = DefaultSelectionId
     this.IsSpinnerListHeader =IsSpinnerListHeader

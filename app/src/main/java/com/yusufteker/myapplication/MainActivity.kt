@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         "Lütfen özel karakter girmeyin.",
         "Lütfen formu boş bırakmayın.",
         "Lütfen en az 8 karakter girin.",
-        15,0)
+        15,0,FormFieldGravityOption.HORIZONTAL)
     private val data3 = AmountFormFieldData(
         "Amount Formu",
         "Lütfen @itu.edu.tr uzantılı mailinizi girin.",
@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         "Lütfen özel karakter girmeyin.",
         "Lütfen geçerli bir değer girin.",
         "Lütfen en az 8 karakter girin.",
-        "Girilen değer 0 ile 10.000.000 arasında olmalıdır.",10_000_000.0,0.01)
+        "Girilen değer 0 ile 10.000.000 arasında olmalıdır.",10_000_000.0,0.01,FormFieldGravityOption.HORIZONTAL)
 
 
     private val spinnerOneLineModel = SpinnerOneLineModel("Seçenek1","1")
@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity() {
     "Lütfen özel karakter girmeyin.",
     "Lütfen formu boş bırakmayın.",
     "Lütfen en az 8 karakter girin.",
-        selections,"2",true
+        selections,"2",true,FormFieldGravityOption.HORIZONTAL
 
 )
     private val data5 = EditTextFormFieldData(
@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity() {
         "Lütfen özel karakter girmeyin.",
         "Lütfen formu boş bırakmayın.",
         "Lütfen en az 8 karakter girin.",
-        120,0)
+        120,0,FormFieldGravityOption.HORIZONTAL)
     val data6 = SelectionFormFieldData(
         "City",
         "Lütfen ilinzi seçiniz.",
@@ -76,7 +76,7 @@ class MainActivity : AppCompatActivity() {
         "Lütfen özel karakter girmeyin.",
         "Lütfen formu boş bırakmayın.",
         "Lütfen en az 8 karakter girin.",
-        selectionsCity,"2",true
+        selectionsCity,"2",true,FormFieldGravityOption.HORIZONTAL
     )
     val data7 = SelectionFormFieldData(
         "Town",
@@ -85,7 +85,7 @@ class MainActivity : AppCompatActivity() {
         "Lütfen özel karakter girmeyin.",
         "Lütfen formu boş bırakmayın.",
         "Lütfen en az 8 karakter girin.",
-        selectionsTown,"2",true
+        selectionsTown,"2",true,FormFieldGravityOption.HORIZONTAL
 
     )
     val dataAddress = AddressFormFieldData(
@@ -95,7 +95,7 @@ class MainActivity : AppCompatActivity() {
         "Lütfen özel karakter girmeyin.",
         "Lütfen formu boş bırakmayın.",
         "Lütfen en az 8 karakter girin.",
-        listOf(data6,data7,data5)
+        listOf(data6,data7,data5),FormFieldGravityOption.HORIZONTAL
     )
 
 

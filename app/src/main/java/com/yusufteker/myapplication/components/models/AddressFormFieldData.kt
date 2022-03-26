@@ -14,7 +14,8 @@ class AddressFormFieldData :FormFieldData {
         ValidationMessageEmptyValue: String,
         ValidationMessageInvalidLength: String,
         FormFields: List<FormFieldData> ,
-        ): super(Title,TooltipMessage,ValidationMessage,ValidationMessageInvalidChars,ValidationMessageEmptyValue,ValidationMessageInvalidLength,MaxLength=8,MinLength=1, AcceptedChars="1234567890"){
+        GravityOption: FormFieldGravityOption
+        ): super(Title,TooltipMessage,ValidationMessage,ValidationMessageInvalidChars,ValidationMessageEmptyValue,ValidationMessageInvalidLength,MaxLength=8,MinLength=1, AcceptedChars="1234567890",GravityOption = FormFieldGravityOption.HORIZONTAL){
 
             this.FormFields = FormFields
 

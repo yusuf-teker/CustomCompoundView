@@ -14,16 +14,16 @@ class AddressFormFieldData2: FormFieldData{
 
         CityFormFieldData: SelectionFormFieldData ,
         TownFormFieldData: SelectionFormFieldData,
-        AddressFormFieldData: EditTextFormFieldData
-    ) : super(Title="",TooltipMessage="",ValidationMessage="",ValidationMessageInvalidChars="",ValidationMessageEmptyValue="",ValidationMessageInvalidLength="",MaxLength=-1,MinLength=-1, AcceptedChars="1234567890") {
+        AddressFormFieldData: EditTextFormFieldData,
+    ) : super(Title="",TooltipMessage="",ValidationMessage="",ValidationMessageInvalidChars="",ValidationMessageEmptyValue="",ValidationMessageInvalidLength="",MaxLength=-1,MinLength=-1, AcceptedChars="1234567890",GravityOption= FormFieldGravityOption.HORIZONTAL) {
         this.CitySelectionFormFieldData = CityFormFieldData
         this.TownSelectionFormFieldData = TownFormFieldData
         this.AddressMultiLineFormFieldData =  AddressFormFieldData
     }
 
     constructor( // Constructor with NO City And Town Selection
-        AddressFormFieldData: EditTextFormFieldData
-    ): super(Title="",TooltipMessage="",ValidationMessage="",ValidationMessageInvalidChars="",ValidationMessageEmptyValue="",ValidationMessageInvalidLength="",MaxLength=-1,MinLength=-1, AcceptedChars="1234567890"){
+        AddressFormFieldData: EditTextFormFieldData,
+    ): super(Title="",TooltipMessage="",ValidationMessage="",ValidationMessageInvalidChars="",ValidationMessageEmptyValue="",ValidationMessageInvalidLength="",MaxLength=-1,MinLength=-1, AcceptedChars="1234567890", GravityOption= FormFieldGravityOption.HORIZONTAL){
         this.AddressMultiLineFormFieldData =  AddressFormFieldData
     }
 
